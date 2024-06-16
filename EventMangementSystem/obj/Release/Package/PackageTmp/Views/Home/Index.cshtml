@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- banner -->
+<div class="banner">
+    <div class="container">
+        <script src="~/js/responsiveslides.min.js"></script>
+        <script>
+			// You can also use "$(window).load(function() {"
+			$(function () {
+				// Slideshow 4
+				$("#slider3").responsiveSlides({
+					auto: true,
+					pager: true,
+					nav: false,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+						$('.events').append("<li>before event fired.</li>");
+					},
+					after: function () {
+						$('.events').append("<li>after event fired.</li>");
+					}
+				});
+			});
+        </script>
+        <div id="top" class="callbacks_container">
+            <ul class="rslides" id="slider3">
+                <li>
+                    <div class="banner-agileinfo">
+                        <h3>WELCOME</h3>
+                        <h4>Event planning</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="banner-agileinfo">
+                        <h3>WELCOME</h3>
+                        <h4>Fallow new ideas for your event planning</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="banner-agileinfo">
+                        <h3>WELCOME</h3>
+                        <h4>We help you plan your special day</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
